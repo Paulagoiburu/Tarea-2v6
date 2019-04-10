@@ -1,0 +1,101 @@
+/*1.- La tabla tiene el exto esta centrado y el tipo de letra es sans-serif*/
+
+table {
+	border-collapse: collapse;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+/*1.- La tabla tiene un solo borde rosa claro*/
+
+td, th {
+	border: 1px solid lightpink;
+}
+
+/*.2- Da color de fondo rosa claro y un tamaño de 18 pixeles al titulo de la tabla*/
+
+caption {
+	background-color: lightpink;
+	color: green;
+	font-size: 18px;
+}
+
+/*.3- Utilizando unicamente pseudoselectores da color fondo rosaclaro a las casillas que contienen la descripcion del contenido de la fila y un tamaño de 18 pixeles*/
+
+tbody tr th:first-child {
+	background-color: lightpink;
+	color:green;
+	font-size: 18px;
+}
+
+/*.4- Utilizando unicamente pseudoselectores da color de fondo verdeclaro a la celda del chip*/
+
+tbody tr:nth-child(4) td:nth-child(2) {
+	background-color: lightgreen;
+}
+
+/*.5- Cambiar los estados de los enlaces para que:
+
+	5.1 Nunca estén subrayados
+
+	5.2 Si están visitados que se muestren en violeta
+
+	5.3 Si no están visitados que se muestren en verde*/
+
+	a {
+	text-decoration: none;
+
+	}
+
+	
+	a:visited {
+	
+	color:violet;
+
+	}
+
+	
+	a:link {
+
+	 color:green;
+
+	 }
+
+/*.6- utilizando pseudoselectores hacer que cuando pasemos el ratón sobre la celda que contiene el mayor valor de cada fila aumente el tamaño al 80% cambie el color de fondo gris y la letra se verde*/
+
+tr td:nth-child(7):hover,
+tr th:nth-child(2):hover,
+tr td:last-child:hover {
+	font-size: 1.8em;
+	background-color: grey;
+	color: green;
+}
+
+/*.7- Utilizando pseudelementos haz que la primera letra del nombre de cada móvil tenga el doble d etamaño y este en negrita*/
+
+thead tr th p::first-letter {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+/*.8- Añade un borde verde que este separado 10px a los campos obligatorios*/
+
+input:required {
+	border: 1px solid lightgreen;
+	padding: 10px;
+}
+
+/*.9- Añade un * en el rojo y como superíndice detrás de las etiquetas acompañan a los campos del formulario*/
+
+label::after {
+	color: red;
+	content: "*";
+	vertical-align: super;
+}
+
+/*.10- Cambiar el fondo del botón del formulario a verdeclaro con el texto gris*/
+
+input [type="button"] {
+	background-color: lightgreen;
+	color: grey;
+}
